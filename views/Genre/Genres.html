@@ -1,0 +1,9 @@
+
+    <h4> Genres </h4>
+    <table class="table table-striped">
+        <th ng-click='order.by="name";order.sort=!order.sort' namesorter='name' sorter label='Name' sortable='true'></th>
+        <th sorter label='Genre' sortable='false'></th>
+        <tbody>
+        <tr ng-repeat="genre in genres | orderBy:order.by:order.sort" genre-item genre="genre"></tr>
+        </tbody>
+    </table>

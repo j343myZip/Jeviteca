@@ -1,0 +1,22 @@
+<tr>
+    <td>
+        <images url="album.image | PatchImage"></images>
+    </td>
+
+    <td>
+        <a ng-href = "#/album/{{ album.id }}/detail"> {{ album.title }} </a>
+    </td>
+
+    <td>{{ album.band.name }}</td>
+    <td>{{ album.genre.name}}</td>
+    <td>{{ album.year }}</td>
+
+    <td>
+        <span favorite-item id-entity="{{ album.id }}", entity="{{ 'album' }}"></span>
+    </td>
+
+    <td>
+        <span ranking-item id-entity="{{ album.id }}", entity="{{ 'album' }}", ></span>
+    </td>
+
+</tr>

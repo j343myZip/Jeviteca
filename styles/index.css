@@ -1,0 +1,23 @@
+.images-cover {
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 9px; }
+
+.title {
+  float: left; }
+
+.title + input {
+  float: right;
+  margin-top: 8px; }
+
+.sortable-icon {
+  margin-left: 5px; }
+  .sortable-icon:before {
+    position: absolute;
+    margin-top: -12px;
+    color: #337ab7; }
+
+.sortable {
+  color: #337ab7; }

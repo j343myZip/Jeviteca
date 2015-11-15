@@ -1,0 +1,14 @@
+<h4 class='title'> Bands </h4>
+<input ng-model="query[queryBy]" placeholder="Search for..." />
+
+<table class="table table-striped">
+    <th sorter label='Image' sortable='false'></th>
+    <th ng-click='order.by="name";order.sort=!order.sort' namesorter='name' sorter label='Name' sortable='true'>Name</th>
+    <th ng-click='order.by="origin";order.sort=!order.sort' namesorter='origin' sorter label='Origin' sortable='true'>Origin</th>
+    <th sorter label='Members' sortable='false'></th>
+    <th sorter label='Favorite' sortable='false'></th>
+    <th sorter label='Ranking' sortable='false'></th>
+    <tbody>
+    <tr ng-repeat="band in bands  | filter:query | orderBy:order.by:order.sort" band-item band="band"></tr>
+    </tbody>
+</table>

@@ -1,0 +1,7 @@
+<tr>
+    <td> {{ genre.name}} </td>
+
+    <td>
+        <p ng-repeat="album in genre.albums | orderBy : 'title'"> {{ album.title }} </p>
+    </td>
+</tr>

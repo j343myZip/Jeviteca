@@ -1,0 +1,22 @@
+
+<div ng-show="getRanking() == null" class="btn-group" role="group" aria-label="">
+    <button ng-click="setRanking('1')" type="button" class="btn btn-default">1</button>
+    <button ng-click="setRanking('2')" type="button" class="btn btn-default">2</button>
+    <button ng-click="setRanking('3')" type="button" class="btn btn-default">3</button>
+    <button ng-click="setRanking('4')" type="button" class="btn btn-default">4</button>
+    <button ng-click="setRanking('5')" type="button" class="btn btn-default">5</button>
+</div>
+
+<span ng-hide="getRanking() == null">
+    <span ng-show="getRanking() >= 1" class="glyphicon glyphicon-star"></span>
+    <span ng-hide="getRanking() >= 1" class="glyphicon glyphicon-star-empty"></span>
+    <span ng-show="getRanking() >= 2" class="glyphicon glyphicon-star"></span>
+    <span ng-hide="getRanking() >= 2" class="glyphicon glyphicon-star-empty"></span>
+    <span ng-show="getRanking() >= 3" class="glyphicon glyphicon-star"></span>
+    <span ng-hide="getRanking() >= 3" class="glyphicon glyphicon-star-empty"></span>
+    <span ng-show="getRanking() >= 4" class="glyphicon glyphicon-star"></span>
+    <span ng-hide="getRanking() >= 4" class="glyphicon glyphicon-star-empty"></span>
+    <span ng-show="getRanking() >= 5" class="glyphicon glyphicon-star"></span>
+    <span ng-hide="getRanking() >= 5" class="glyphicon glyphicon-star-empty"></span>
+</span>
+

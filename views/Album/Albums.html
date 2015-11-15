@@ -1,0 +1,17 @@
+
+
+<h4 class='title'> Albums </h4>
+
+<input ng-model="query[queryBy]" placeholder="Search for..." />
+<table class="table table-striped">
+    <th sorter label='Image' sortable='false'></th>
+    <th ng-click='order.by="title";order.sort=!order.sort' namesorter='title' sorter label='Album' sortable='true'></th>
+    <th ng-click='order.by="band.name";order.sort=!order.sort' namesorter='band.name' sorter label='Band' sortable='true'>Band</th>
+    <th ng-click='order.by="genre.name";order.sort=!order.sort' namesorter='genre.name' sorter label='Genre' sortable='true'></th>
+    <th ng-click='order.by="year";order.sort=!order.sort' namesorter='year' sorter label='Year' sortable='true'></th>
+    <th sorter label='Favourite' sortable='false'></th>
+    <th sorter label='Ranking' sortable='false'></th>
+    <tbody>
+        <tr album-item ng-repeat="album in albums | filter:query | orderBy:order.by:order.sort" album="album"></tr>
+    </tbody>
+</table>

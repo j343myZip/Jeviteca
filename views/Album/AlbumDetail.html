@@ -1,0 +1,22 @@
+
+<div class="col-md-4">
+    <h4>Information:</h4>
+    <p>Title: {{ album.title }}</p>
+    <p>Year: {{ album.year}}</p>
+    <p>Band Name: {{ album.band.name}} </p>
+    <p>Genre Name: {{ album.genre.name}} </p>
+</div>
+
+<div class="col-md-4">
+        <img class="img-rounded" ng-src="resources/img/{{album.image}}">
+</div>
+
+<div class="col-md-4">
+    <h4>Tracks:</h4>
+    <ul>
+        <li ng-repeat="track in album.tracklist">
+        <a ng-href = "https://www.youtube.com/results?search_query={{::album.title}}-{{::track}}" target="_blank"> {{ track }} </a>
+    </ul>
+</div>
+
+

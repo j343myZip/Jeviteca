@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="Jeviteca">
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>Jeviteca</title>
+
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-route/angular-route.min.js" ></script>
+    <script src="vendor/angular-route-segment/build/angular-route-segment.js" ></script>
+    <script src="scripts/app.js"></script>
+
+    <script src="scripts/controllers/NavegacionCtrl.js"></script>
+    <script src="scripts/controllers/AlbumCtrl.js"></script>
+    <script src="scripts/controllers/BandsCtrl.js"></script>
+    <script src="scripts/controllers/GenresCtrl.js"></script>
+
+    <script src="scripts/services/AlbumsProvider.js"></script>
+    <script src="scripts/services/BandsProvider.js"></script>
+    <script src="scripts/services/GenresProvider.js"></script>
+
+    <script src="scripts/directives/general.js"></script>
+    <script src="scripts/directives/albumItem.js"></script>
+    <script src="scripts/directives/bandItem.js"></script>
+    <script src="scripts/directives/genreItem.js"></script>
+    <script src="scripts/directives/favoriteItem.js"></script>
+    <script src="scripts/directives/rankingItem.js"></script>
+
+
+    <script src="scripts/controllers/AlbumDetail.js"></script>
+    <script src="scripts/controllers/BandDetail.js"></script>
+    <script src="scripts/filters/PatchImage.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- link rel="stylesheet" href="styles/bootstrap.css" / -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Jeviteca</h1>
+        </header>
+
+        <nav ng-controller="NavegacionCtrl">
+            <ul class="nav nav-tabs">
+                <li ng-class="{ 'active' : routeIsAlbum() }">
+                    <a href="#/album">Albums</a>
+                </li>
+                <li ng-class="{ 'active' : routeIsBands() }">
+                    <a href="#/bands">Bandas</a>
+                </li>
+                <li ng-class="{ 'active' : routeIsGenre() }">
+                    <a href="#/genres">Generos</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section app-view-segment="0"></section>
+
+    </div>
+
+ </body>
+
+ </html>

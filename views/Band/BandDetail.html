@@ -1,0 +1,29 @@
+
+<div class="col-md-4">
+    <h4>Information:</h4>
+    <p>Name: {{band.name }} </p>
+    <p>Origin: {{ band.origin}} </p>
+</div>
+
+<div class="col-md-4">
+        <img class="img-rounded" ng-src="resources/img/{{band.photo}}">
+</div>
+
+<div class="col-md-4">
+    <h4>Members:</h4>
+    <ul>
+        <li ng-repeat="member in band.members">
+            <wikipedia name='member.name'></wikipedia>
+            ( {{ member.instruments.join(",")}} )
+        </li>
+    </ul>
+</div>
+
+<div class="col-md-4">
+    <h4>Albums:</h4>
+    <ul>
+        <li ng-repeat="album in band.albums">
+            {{ album.title }}
+            ( {{  album.year}} )
+    </ul>
+</div>
